@@ -3,6 +3,7 @@ function showPythagoras() {
     // document.getElementById("show").innerHTML = amount  
     let array = []
     let show = ""
+    let count = 0
     for (let i = 1; i <= amount; i++) {
         for (let j = 1; j <= amount; j++) {
             for (let k = 1; k <= amount; k++) {
@@ -10,12 +11,15 @@ function showPythagoras() {
                 array[1] = j
                 array[2] = k           
                 if (k*k == i*i + j*j && i <= j && euclid_gcd_many(array) == 1) {
-                    show = show + `${i} , ${j} , ${k} <br>`                    
+                    count++
+                    show = show + `ชุดที่ ${count}  คือ ${i} , ${j} , ${k} <br>`                    
                 }
             }
         }
     }
-    document.getElementById("show").innerHTML = show
+    count = `จำนวนชุดที่คำนวณได้คือ ${count} ชุด`
+    document.getElementById("show1").innerHTML = count
+    document.getElementById("show2").innerHTML = show
 }
 // function หา ห.ร.ม.
 function euclid_gcd_two(number1,number2) {
