@@ -17,7 +17,7 @@ function showPythagoras() {
             }
         }
     }
-    count = `จำนวนชุดที่คำนวณได้คือ ${count} ชุด`
+    count = `ชุดจำนวนปีทากอรัสของจำนวนนับไม่เกิน ${amount} มีจำนวน ${count} ชุด ดังนี้`
     document.getElementById("show1").innerHTML = count
     document.getElementById("show2").innerHTML = show
 }
